@@ -48,44 +48,14 @@
   </style>
 </head>
 <body>
-  <h1>導入タグ 動作確認ページ</h1>
+  <h1>確認ページ２</h1>
   <p class="muted">このページはindex2.htmlで翻訳タグの挙動を確認するためのサンプルです。</p>
 
   <section class="card">
-    <h2>1. 基本文言</h2>
-    <p>これは翻訳対象になる通常テキストです。東京の今日の天気は晴れです。</p>
-    <p>料金プラン、お知らせ、お問い合わせ、よくある質問などを想定しています。</p>
+    <h2>1. 翻訳確認</h2>
+    <p>大阪の今日の天気は曇りです。</p>
+    <p>テキストが翻訳されるか確認してください。</p>
   </section>
-
-  <section class="card">
-    <h2>2. ボタン・フォーム</h2>
-    <button id="actionBtn">無料トライアルを開始する</button>
-    <label for="nameInput">お名前</label>
-    <input id="nameInput" type="text" placeholder="山田 太郎" />
-    <label for="msgInput">お問い合わせ内容</label>
-    <textarea id="msgInput" rows="3" placeholder="お問い合わせ内容を入力してください"></textarea>
-  </section>
-
-  <section class="card">
-    <h2>3. 後から追加される文言</h2>
-    <p id="dynamicText">3秒後にテキストを追加します。</p>
-  </section>
-
-  <section class="card">
-    <h2>4. 英数字混在</h2>
-    <p>注文番号: ORD-2026-0001 / 配送予定日: 2026-04-10</p>
-    <p>APIキーは表示しないでください。</p>
-  </section>
-
-  <script>
-    setTimeout(function () {
-      var el = document.getElementById("dynamicText");
-      el.textContent = "動的に追加された文言です。翻訳されるか確認してください。";
-    }, 3000);
-
-    document.getElementById("actionBtn").addEventListener("click", function () {
-      alert("ボタンがクリックされました。");
-    });
-  </script>
+  <img src="スクリーンショット 2026-06-26 11.12.30.png">
 </body>
 </html>
