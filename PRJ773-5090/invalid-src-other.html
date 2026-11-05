@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>別形式の不正srcの確認</title>
+</head>
+<body>
+  <h1>別形式の不正src</h1>
+  <p>不正なIPv6形式でもページ生成が継続することを確認します。</p>
+
+  <h2>不正src・正常srcset</h2>
+  <img id="invalid-other"
+       src="http://["
+       srcset="/honyaku-sample/sample.svg 1x"
+       alt="不正srcの画像"
+       width="240" height="100">
+
+  <h2>後続の正常画像</h2>
+  <img id="following"
+       src="/honyaku-sample/sample.svg"
+       alt="後続の正常画像"
+       width="240" height="100">
+</body>
+</html>
