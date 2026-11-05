@@ -8,12 +8,18 @@
 </head>
 <body>
   <h1>不正src・不正srcset</h1>
-
+  
   <h2>両方不正な画像</h2>
   <img id="invalid-both"
        src="https://haruka-yamamoto-ea.github.iodata:image/png;base64,AAAA"
-       srcset="/honyaku-sample/PRJ773-5090/sample.svg 1x, http://[ 2x"
+       srcset="https://haruka-yamamoto-ea.github.iodata:image/png;base64,AAAA, http://[ 2x"
        alt="両方不正な画像" width="240" height="100">
+  
+  <h2>不正srcと不正なsrcset（一件は正常）を含む画像</h2>
+  <img id="invalid-both"
+       src="https://haruka-yamamoto-ea.github.iodata:image/png;base64,AAAA"
+       srcset="/honyaku-sample/PRJ773-5090/sample.svg 1x, http://[ 2x"
+       alt="不正srcと不正なsrcset（一件は正常）を含む画像" width="240" height="100">
 
   <h2>後続の正常画像</h2>
   <img id="following"
