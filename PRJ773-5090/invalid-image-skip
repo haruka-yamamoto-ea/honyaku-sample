@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>不正画像URLのスキップ確認</title>
+  <!-- 導入タグ -->
+  <script src="https://sandbox-d.ea-shutto-translation.net/trans.js?id=86220"></script>
+</head>
+<body>
+  <h1>不正src・不正srcset</h1>
+  
+  <h2>両方(src/srcset)不正な画像</h2>
+  <img id="invalid-both"
+       src="https://haruka-yamamoto-ea.github.iodata:image/png;base64,AAAA"
+       srcset="https://haruka-yamamoto-ea.github.iodata:image/png;base64,AAAA, http://[ 2x"
+       alt="両方不正な画像" width="240" height="100">
+  
+  <h2>正常srcと不正なsrcsetを含む画像</h2>
+  <img id="invalid-both"
+       src="/honyaku-sample/PRJ773-5090/sample.svg"
+       srcset="https://haruka-yamamoto-ea.github.iodata:image/png;base64,AAAA, http://[ 2x"
+       alt="正常srcと不正なsrcsetを含む画像" width="240" height="100">
+
+  <h2>不正srcと不正なsrcsetと正常なsrcsetを含む画像</h2>
+  <img id="invalid-both"
+       src="https://haruka-yamamoto-ea.github.iodata:image/png;base64,AAAA"
+       srcset="/honyaku-sample/PRJ773-5090/sample.svg 1x, http://[ 2x"
+       alt="不正srcと不正なsrcsetと正常なsrcsetを含む画像" width="240" height="100">
+
+  <h2>後続の正常画像(src)</h2>
+  <img id="following"
+       src="/honyaku-sample/PRJ773-5090/sample.svg"
+       alt="後続の正常画像" width="240" height="100">
+
+  <h2>後続の正常画像(srcset)</h2>
+  <img id="following"
+       srcset="/honyaku-sample/PRJ773-5090/sample.svg 1x, /honyaku-sample/PRJ773-5090/sample.svg 2x"
+       alt="後続の正常画像(srcset)" width="240" height="100">
+</body>
+</html>
